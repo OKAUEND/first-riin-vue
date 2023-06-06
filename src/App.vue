@@ -10,7 +10,13 @@ export default {
   data() {
     return {
       hoge: 'fooooooooooo cat',
-      isShow: false
+      isShow: false,
+      arr: [1, 3, 5, 7],
+      car: {
+        name: 'kuruma',
+        speede: 'hayai',
+        price: 'takai'
+      }
     }
   }
 }
@@ -23,6 +29,14 @@ export default {
     <div v-if="isShow">
       {{ hoge }}
     </div>
+
+    <ul>
+      <li v-for="(item, key) in car" :key="key">{{ key }} - {{ item }}</li>
+    </ul>
+
+    <ul>
+      <li v-for="item in arr" :key="item"><TheWelcome /></li>
+    </ul>
 
     <button @click="isShow = !isShow">toggle</button>
 
