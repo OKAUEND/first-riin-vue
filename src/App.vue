@@ -6,6 +6,12 @@ export default {
   components: {
     HelloWorld,
     TheWelcome
+  },
+  data() {
+    return {
+      hoge: 'fooooooooooo cat',
+      isShow: false
+    }
   }
 }
 </script>
@@ -13,6 +19,12 @@ export default {
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+
+    <div v-if="isShow">
+      {{ hoge }}
+    </div>
+
+    <button @click="isShow = !isShow">toggle</button>
 
     <div class="wrapper">
       <HelloWorld msg="Riin Vue道場！" />
