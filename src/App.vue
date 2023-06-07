@@ -10,13 +10,24 @@ export default {
   data() {
     return {
       hoge: 'fooooooooooo cat',
-      isShow: false,
+      isShow: true,
       arr: [1, 3, 5, 7],
       car: {
         name: 'kuruma',
         speede: 'hayai',
         price: 'takai'
-      }
+      },
+      count: 0
+    }
+  },
+  methods: {
+    increment() {
+      this.count++
+    }
+  },
+  computed: {
+    double() {
+      return this.count * 2
     }
   }
 }
@@ -27,8 +38,15 @@ export default {
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div v-if="isShow">
+      <input v-model="hoge" />
       {{ hoge }}
     </div>
+
+    <div>{{ count }}</div>
+
+    countの2倍!!{{ double }}
+
+    <button @click="increment">+1</button>
 
     <ul>
       <li v-for="(item, key) in car" :key="key">{{ key }} - {{ item }}</li>
