@@ -17,14 +17,17 @@ export default {
         speede: 'hayai',
         price: 'takai'
       },
-      count: 0
+      count: 0,
+      isDisabled: true
     }
   },
   methods: {
+    //関数はメソッドエリア？で作る
     increment() {
       this.count++
     }
   },
+  //computedはdataが変わったら反応して、戻値が動的に計算し直す
   computed: {
     double() {
       return this.count * 2
@@ -38,9 +41,20 @@ export default {
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div v-if="isShow">
-      <input v-model="hoge" />
+      <!-- 属性を指定し、変数を指定することで、値の切り替えに反応できる -->
+      <input v-model="hoge" :disabled="isDisabled" />
+
       {{ hoge }}
     </div>
+
+    <!-- 動的にクラスを紐付ける 
+    dataの変数へ:classでアクセスして、hogeを呼び出す
+    -->
+    <div :class="hoge">うひょおおおおお</div>
+
+    <!-- イベントで変数へ値を代入する
+    この場合は、!で変数の反対にしてるので、trueとfalseを入れ替える -->
+    <button @click="isDisabled = !isDisabled">とぐる！！</button>
 
     <div>{{ count }}</div>
 
@@ -94,5 +108,9 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+}
+
+.uhyooooooooooo {
+  background-color: red;
 }
 </style>
