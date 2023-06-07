@@ -31,6 +31,9 @@ export default {
   computed: {
     double() {
       return this.count * 2
+    },
+    superMessage() {
+      return `われわれは${this.hoge}だ。${this.double}個分のアンコリーノを差し出せ`
     }
   }
 }
@@ -46,6 +49,8 @@ export default {
 
       {{ hoge }}
     </div>
+
+    {{ superMessage }}
 
     <!-- 動的にクラスを紐付ける 
     dataの変数へ:classでアクセスして、hogeを呼び出す
