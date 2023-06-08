@@ -52,6 +52,10 @@ export default {
 
     {{ superMessage }}
 
+    {{ arr[1] }}
+
+    {{ car.name }}
+
     <!-- 動的にクラスを紐付ける 
     dataの変数へ:classでアクセスして、hogeを呼び出す
     -->
