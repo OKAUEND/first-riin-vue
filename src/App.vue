@@ -89,6 +89,9 @@ export default {
   <main>
     <TheWelcome />
   </main>
+  <router-link to="/">home</router-link>
+  <router-link to="/about">about</router-link>
+  foooooooooooooooo cat
   <router-view></router-view>
 </template>
 
