@@ -75,4 +75,5 @@ export default {
   <button @click="isShow = !isShow">toggle</button>
 
   <router-link to="/about">Aboutへ</router-link>
+  <router-link to="/develop">Developへ</router-link>
 </template>

@@ -15,6 +15,7 @@
 -->
   <router-link to="/">home</router-link>
   <router-link to="/about">about</router-link>
+  <router-link to="/develop">develop</router-link>
   foooooooooooooooo cat
   <router-view></router-view>
 </template>
