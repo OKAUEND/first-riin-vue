@@ -1,3 +1,13 @@
+<script>
+import TheHeader from '@/pages/TheHeader.vue'
+
+export default {
+  components: {
+    TheHeader
+  }
+}
+</script>
+
 <template>
   <!--
   <header>
@@ -13,9 +23,7 @@
     <TheWelcome />
   </main>
 -->
-  <router-link to="/">home</router-link>
-  <router-link to="/about">about</router-link>
-  <router-link to="/develop">develop</router-link>
+  <the-header></the-header>
   foooooooooooooooo cat
   <router-view></router-view>
 </template>

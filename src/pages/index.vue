@@ -1,5 +1,10 @@
 <script>
+import TheHeader from '@/pages/TheHeader.vue'
+
 export default {
+  components: {
+    TheHeader
+  },
   data() {
     return {
       hoge: 'fooooooooooo cat',
@@ -74,6 +79,5 @@ export default {
 
   <button @click="isShow = !isShow">toggle</button>
 
-  <router-link to="/about">Aboutへ</router-link>
-  <router-link to="/develop">Developへ</router-link>
+  <the-header></the-header>
 </template>

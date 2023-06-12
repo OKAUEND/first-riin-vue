@@ -1,9 +1,11 @@
 <script>
 import TheWelcome from '@/components/TheWelcome.vue'
+import TheHeader from '@/pages/TheHeader.vue'
 
 export default {
   components: {
-    TheWelcome
+    TheWelcome,
+    TheHeader
   }
 }
 </script>
@@ -11,6 +13,5 @@ export default {
 <template>
   <div>about</div>
   <the-welcome></the-welcome>
-  <router-link to="/">Homeへ</router-link>
-  <router-link to="/develop">Developへ</router-link>
+  <the-header></the-header>
 </template>
