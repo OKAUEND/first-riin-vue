@@ -89,6 +89,7 @@ export default {
   <main>
     <TheWelcome />
   </main>
+  <router-view></router-view>
 </template>
 
 <style scoped>
