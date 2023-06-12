@@ -11,4 +11,5 @@ export default {
 <template>
   <div>about</div>
   <the-welcome></the-welcome>
+  <router-link to="/">Homeへ</router-link>
 </template>
