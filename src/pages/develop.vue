@@ -50,5 +50,6 @@ export default {
   <!-- @click="count +2" は何も代入していないので結果虚無に消えている。ｼｮｯｷﾞｮﾑｯｼﾞｮ -->
   <button @click="count = count + 2">+2</button>
   <button @click="double">*2</button>
+  <button @mouseover="double">ふふふ</button>
   <the-header></the-header>
 </template>
