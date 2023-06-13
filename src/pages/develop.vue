@@ -7,7 +7,8 @@ export default {
   },
   data() {
     return {
-      count: 0
+      count: 1,
+      isShow: true,
     }
   },
   methods: {
@@ -51,5 +52,6 @@ export default {
   <button @click="count = count + 2">+2</button>
   <button @click="double">*2</button>
   <button @mouseover="double">ふふふ</button>
+  <button @click="isShow = false">消えろ！アンコリーノ！</button>
   <the-header></the-header>
 </template>
