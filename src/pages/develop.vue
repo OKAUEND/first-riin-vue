@@ -53,5 +53,6 @@ export default {
   <button @click="double">*2</button>
   <button @mouseover="double">ふふふ</button>
   <button @click="isShow = false">消えろ！アンコリーノ！</button>
+  <button @click="sample($event)">あんこリーノとは</button>
   <the-header></the-header>
 </template>
