@@ -18,10 +18,17 @@ export default {
       this.count = this.count * 2
     },
     decrement() {
-      this.count--
+      //関数の呼び出しは、単体では動かない。必ず()をつけよう
+      this.increment()
     },
     division() {
       this.count = this.count / 2
+    },
+    add(num) {
+      this.count = this.count + num
+    },
+    sample(hoge) {
+      console.log(hoge)
     }
   }
 }
@@ -29,12 +36,19 @@ export default {
 
 <template>
   <div>Develop</div>
-
-  <h2>アンコリーノ工場</h2>
+  <div v-if="isShow">
+    <h2>アンコリーノ工場</h2>
+  </div>
   {{ count }}個のアンコリーノ
+  <!-- @はこの後はイベントハンドラという宣言する構文
+       その後のclickはクリックイベント-->
   <button @click="division">/2</button>
   <button @click="decrement">-1</button>
-  <button @click="increment">+1</button>
+  <button @click="add(1)">+1</button>
+  <button @click="add(2)">+2</button>
+  <button @click="add(3)">+3</button>
+  <!-- @click="count +2" は何も代入していないので結果虚無に消えている。ｼｮｯｷﾞｮﾑｯｼﾞｮ -->
+  <button @click="count = count + 2">+2</button>
   <button @click="double">*2</button>
   <the-header></the-header>
 </template>
