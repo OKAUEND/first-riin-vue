@@ -37,11 +37,19 @@ export default {
       console.log(hoge)
     },
     addMessage() {
+      if (this.tmpMessage.length < 2) return
       this.messages.push(this.tmpMessage)
+      this.tmpMessage = ''
     },
     delMessage() {
       this.messages.pop()
     }
+  },
+  //mountedで、コンポーネントが最初に表示した時だけ処理をしてくれるよ
+  mounted() {
+    console.log('ねこはいいぞ')
+    this.message = 'ねこはいます。よろしくおねがいします'
+    this.tmpMessage = 'ねこはどこにでもいます'
   }
 }
 </script>
