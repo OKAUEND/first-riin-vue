@@ -1,9 +1,11 @@
 <script>
 import TheHeader from '@/pages/TheHeader.vue'
+import Listitem from '@/components/Listitem.vue'
 
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    Listitem
   },
   data() {
     return {
@@ -70,7 +72,7 @@ export default {
   <button @click="increment">+1</button>
 
   <ul>
-    <li v-for="(item, key) in car" :key="key">{{ key }} - {{ item }}</li>
+    <Listitem :msg="item" v-for="(item, key) in car" :key="key">{{ key }} - {{ item }}</Listitem>
   </ul>
 
   <ul>
