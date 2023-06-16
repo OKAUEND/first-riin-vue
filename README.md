@@ -1,4 +1,6 @@
-# first-rin-vue
+# Riin の Vue 道場
+
+![RiinのVue道場のロゴ](./public/230612_RiinVue.png)
 
 This template should help get you started developing with Vue 3 in Vite.
 
