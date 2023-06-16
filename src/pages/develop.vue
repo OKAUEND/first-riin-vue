@@ -9,6 +9,11 @@ export default {
     return {
       count: 1,
       isShow: true,
+      number: 5,
+      arr: [1, 5, 10, 12, 34, 50, 76],
+      tmpMessage: 'sample',
+      message: '',
+      messages: ['test', 'TestHoge']
     }
   },
   methods: {
@@ -30,6 +35,12 @@ export default {
     },
     sample(hoge) {
       console.log(hoge)
+    },
+    addMessage() {
+      this.messages.push(this.tmpMessage)
+    },
+    delMessage() {
+      this.messages.pop()
     }
   }
 }
@@ -54,5 +65,25 @@ export default {
   <button @mouseover="double">ふふふ</button>
   <button @click="isShow = false">消えろ！アンコリーノ！</button>
   <button @click="sample($event)">あんこリーノとは</button>
+  <ul>
+    <li v-for="(index, key) in number" :key="key">
+      <button @click="add(index)">今川焼きを{{ index }}個増やす</button>
+    </li>
+  </ul>
+  <ul>
+    <li v-for="(number, key) in arr" :key="key">
+      <button @click="add(number)">大判焼きを{{ number }}個増やす</button>
+    </li>
+  </ul>
+
+  {{ message }}
+  <input v-model="tmpMessage" />
+  <button @click="addMessage()">はーーーーー！</button>
+  <button @click="delMessage()">きえろ！！</button>
+  {{ messages }}
+
+  <ul>
+    <li v-for="(index, key) in messages" :key="key">{{ index }}</li>
+  </ul>
   <the-header></the-header>
 </template>
