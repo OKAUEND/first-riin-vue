@@ -7,6 +7,16 @@ import MainComponent from './pages/index.vue'
 import AboutComponent from './pages/about.vue'
 import DevelopComponent from './pages/develop.vue'
 
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+  components,
+  directives
+})
+
 const routes = [
   { path: '/', component: MainComponent },
   { path: '/about', component: AboutComponent },
@@ -18,4 +28,4 @@ const router = createRouter({
   routes
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(vuetify).mount('#app')
