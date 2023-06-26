@@ -15,8 +15,7 @@ export default {
 </script>
 
 <template>
-  <div>home</div>
+  <div>ワンちゃんのページ</div>
   <button @click="dog()">DOG!</button>
-  {{ wannwann.status }}
   <img :src="wannwann.message" />
 </template>
