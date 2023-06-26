@@ -6,6 +6,7 @@ import App from './App.vue'
 import MainComponent from './pages/index.vue'
 import AboutComponent from './pages/about.vue'
 import DevelopComponent from './pages/develop.vue'
+import DogComponent from './pages/dog.vue'
 
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -20,7 +21,8 @@ const vuetify = createVuetify({
 const routes = [
   { path: '/', component: MainComponent },
   { path: '/about', component: AboutComponent },
-  { path: '/develop', component: DevelopComponent }
+  { path: '/develop', component: DevelopComponent },
+  { path: '/dog', component: DogComponent }
 ]
 
 const router = createRouter({
