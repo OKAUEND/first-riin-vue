@@ -1,11 +1,13 @@
 <script>
 import TheHeader from '@/pages/TheHeader.vue'
 import Counter from '@/components/Counter.vue'
+import SharedCount from '@/components/SharedCounter.vue'
 
 export default {
   components: {
     TheHeader,
     Counter,
+    SharedCount
   },
   data() {
     return {
@@ -15,7 +17,8 @@ export default {
       arr: [1, 5, 10, 12, 34, 50, 76],
       tmpMessage: 'sample',
       message: '',
-      messages: ['test', 'TestHoge']
+      messages: ['test', 'TestHoge'],
+      sharedCount: 0
     }
   },
   methods: {
@@ -89,6 +92,9 @@ export default {
     <Counter />
     <Counter />
 
+    <SharedCount :count="count" :increment="increment" />
+    <SharedCount :count="count" :increment="increment" />
+    <SharedCount :count="count" :increment="increment" />
     <!-- @はこの後はイベントハンドラという宣言する構文
        その後のclickはクリックイベント-->
     <!-- <v-btn @click="division">/2</v-btn>
