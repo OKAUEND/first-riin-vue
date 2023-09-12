@@ -1,9 +1,11 @@
 <script>
 import TheHeader from '@/pages/TheHeader.vue'
+import Counter from '@/components/Counter.vue'
 
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    Counter,
   },
   data() {
     return {
@@ -82,6 +84,11 @@ export default {
         ><v-btn @click="add(item)">{{ item }}個のアンコリーノを増やす</v-btn></v-list-item
       >
     </v-list>
+
+    <Counter />
+    <Counter />
+    <Counter />
+
     <!-- @はこの後はイベントハンドラという宣言する構文
        その後のclickはクリックイベント-->
     <!-- <v-btn @click="division">/2</v-btn>
